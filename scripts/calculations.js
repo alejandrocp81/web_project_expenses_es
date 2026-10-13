@@ -92,7 +92,9 @@ function addExpenseEntry(entry) {
   const category = entry[0];
   const amount = entry[1];
 
+  // 1. Guardamos el nuevo gasto en el arreglo de registros
   expenseEntries.push(entry);
-  totalExpensesValue.push(entry);
+  
+  // 2. Actualizamos correctamente la suma total acumulada sumando el monto
   totalExpensesValue += amount;
 }
