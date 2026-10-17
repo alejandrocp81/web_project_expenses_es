@@ -13,7 +13,6 @@ const expenseEntries = [
 
 for (let i = 0; i < expenseEntries.length; i++) {
   totalExpensesValue += expenseEntries[i][1];
-  console.log("Valor total de los gastos:", totalExpensesValue.toFixed(0));
 }
 
 function calculateAverageExpense() {
@@ -25,13 +24,10 @@ function calculateAverageExpense() {
   return average;
 }
 
-console.log("Gatos Promedio:", calculateAverageExpense());
-
 function calculateBalance() {
   return budgetValue - totalExpensesValue;
 }
 
-console.log("Saldo disponible:", calculateBalance());
 
 let balanceColor = "green";
 
@@ -46,8 +42,7 @@ function updateBalanceColor() {
     balanceColor = "green";
   }
 
-  console.log("Color del saldo:", balanceColor);
-}
+ }
 
 function calculateCategoryExpenses(categoryName) {
   let total = 0;
@@ -89,7 +84,6 @@ function calculateLargestCategory() {
 }
 
 function addExpenseEntry(entry) {
-  const category = entry[0];
   const amount = entry[1];
 
   // 1. Guardamos el nuevo gasto en el arreglo de registros
